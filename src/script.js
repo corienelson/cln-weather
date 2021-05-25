@@ -21,8 +21,8 @@ form.addEventListener("submit", search);
 function getTemperature(response) {
   let tempRound = Math.round(response.data.main.temp);
 
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = `<strong><larger>${tempRound}</larger></strong>  <sup>°F</sup>`;
+  let h4 = document.querySelector("h4");
+  h4.innerHTML = `<strong><larger>${tempRound}</larger></strong>  <sup>°C/°F</sup>`;
 }
 
 let now = new Date();
@@ -56,8 +56,8 @@ let month = months[now.getMonth()];
 let hour = now.getHours();
 let minutes = now.getMinutes();
 
-let h4 = document.querySelector("h4");
+let h3 = document.querySelector("h3");
 let date = now.getDate();
 let year = now.getFullYear();
 
-h4.innerHTML = `${day}, ${month} ${date}, ${year}.  ${hour}:${minutes}`;
+h3.innerHTML = `${day}, ${month} ${date}, ${year}  ${hour}:${minutes}`;
