@@ -23,6 +23,7 @@ h2 {
   margin: 20px;
   text-align: center;
   margin-bottom: 5px;
+  text-transform: capitalize;
 }
 h3 {
   color: #2b3966;
@@ -50,6 +51,7 @@ li {
   padding: 0;
   font-size: 14px;
   color: #2b3966;
+  text-transform: capitalize;
 }
 
 form {

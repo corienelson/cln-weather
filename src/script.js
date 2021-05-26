@@ -20,9 +20,19 @@ form.addEventListener("submit", search);
 
 function getTemperature(response) {
   let tempRound = Math.round(response.data.main.temp);
+  let conditionsElement = document.querySelector("#conditions");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedRound = Math.round(response.data.wind.speed);
+  let windSpeedElement = document.querySelector("#windSpeed");
 
   let h4 = document.querySelector("h4");
-  h4.innerHTML = `${tempRound}`;
+  h4.innerHTML = `${tempRound}<span class= "units">
+            °C | <a href="#">°F</a></span>`;
+  console.log(response.data);
+
+  conditionsElement.innerHTML = `${response.data.weather[0].description}`;
+  humidityElement.innerHTML = `Humidity %: ${response.data.main.humidity}`;
+  windSpeedElement.innerHTML = `Wind Speed MPH: ${windSpeedRound}`;
 }
 
 let now = new Date();
