@@ -35,9 +35,10 @@ h3 {
 }
 h4 {
   color: #3054c9;
-  font-size: 80px;
-  margin: 30px;
+  font-weight: 900;
+  font-size: 100px;
   text-align: center;
+  margin-bottom: 40px;
 }
 ul {
   margin: 0;
@@ -89,4 +90,18 @@ form {
   text-align: center;
   color: #2b3966;
   margin-top: 80px;
+}
+.main-icon img {
+  width: 100px;
+  margin-left: 70px;
+}
+.units {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  top: -50px;
+}
+.units a:link {
+  text-decoration: none;
 }

@@ -22,7 +22,7 @@ function getTemperature(response) {
   let tempRound = Math.round(response.data.main.temp);
 
   let h4 = document.querySelector("h4");
-  h4.innerHTML = `<strong><larger>${tempRound}</larger></strong>  <sup>°C/°F</sup>`;
+  h4.innerHTML = `${tempRound}`;
 }
 
 let now = new Date();
