@@ -94,7 +94,7 @@ form {
   margin-top: 80px;
 }
 .main-icon img {
-  width: 100px;
+  width: 120px;
   margin-left: 70px;
 }
 .units {
@@ -106,4 +106,7 @@ form {
 }
 .units a:link {
   text-decoration: none;
+}
+.button {
+  color: red;
 }

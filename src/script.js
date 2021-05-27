@@ -24,6 +24,7 @@ function getTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedRound = Math.round(response.data.wind.speed);
   let windSpeedElement = document.querySelector("#windSpeed");
+  let iconElement = document.querySelector("#icon");
 
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${tempRound}<span class= "units">
@@ -33,6 +34,11 @@ function getTemperature(response) {
   conditionsElement.innerHTML = `${response.data.weather[0].description}`;
   humidityElement.innerHTML = `Humidity %: ${response.data.main.humidity}`;
   windSpeedElement.innerHTML = `Wind Speed MPH: ${windSpeedRound}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let now = new Date();
@@ -65,6 +71,9 @@ let months = [
 let month = months[now.getMonth()];
 let hour = now.getHours();
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 let h3 = document.querySelector("h3");
 let date = now.getDate();
