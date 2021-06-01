@@ -65,21 +65,25 @@ form {
 }
 .card {
   height: 180px;
+  padding-bottom: 5px;
 }
-.card-text {
+.weather-forecast {
   color: #3366ff;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   margin-top: 2px;
+  margin-bottom: 10px;
 }
 .card-img-top {
   padding: 10px;
   height: 90px;
+  margin-bottom: 2px;
 }
 .card-body {
   margin: 5px;
-  padding: 5px;
+  padding: 10px;
+  padding-top: 0px;
 }
 .row {
   margin-bottom: 20px;
