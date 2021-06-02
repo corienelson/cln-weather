@@ -1,5 +1,6 @@
 .weather-app {
   max-width: 800px;
+  height: 650px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #2b3966;
@@ -10,16 +11,16 @@ body {
   font-family: "Krub", sans-serif;
 }
 h1 {
-  color: #3366ff;
+  color: #3054c9;
   font-weight: 900;
-  font-size: 70px;
+  font-size: 65px;
   margin: 20px;
   text-align: center;
 }
 h2 {
   color: #3054c9;
   font-weight: bolder;
-  font-size: 55px;
+  font-size: 50px;
   margin: 20px;
   text-align: center;
   margin-bottom: 5px;
@@ -31,15 +32,16 @@ h3 {
   font-size: 20px;
   margin: 20px;
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 h4 {
   color: #3054c9;
   font-weight: 900;
-  font-size: 100px;
+  font-size: 70px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 ul {
@@ -86,10 +88,9 @@ form {
   padding-top: 0px;
 }
 .row {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  width: 800;
-  height: 300;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  max-height: 120px;
 }
 .container {
   width: 800px;
