@@ -18,6 +18,15 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+function getForcast(coordinates) {
+  let apiKey = "f497dd013770ffc0e7b4a6160611c850";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data);
+}
 function getTemperature(response) {
   let tempRound = Math.round(response.data.main.temp);
   let conditionsElement = document.querySelector("#conditions");
@@ -28,7 +37,7 @@ function getTemperature(response) {
 
   let h4 = document.querySelector("h4");
   h4.innerHTML = `${tempRound}<span class= "units">
-            °C | <a href="#">°F</a></span>`;
+            °F</span>`;
   console.log(response.data);
 
   conditionsElement.innerHTML = `${response.data.weather[0].description}`;
@@ -39,6 +48,8 @@ function getTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 let now = new Date();
